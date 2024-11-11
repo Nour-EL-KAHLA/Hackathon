@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  --dot-bg: rgb(0, 0, 0);
+  --dot-color: rgb(143, 143, 143);
+  --dot-size: 1px;
+  --dot-space: 22px;
+  background: linear-gradient(
+        90deg,
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    linear-gradient(
+        var(--dot-bg) calc(var(--dot-space) - var(--dot-size)),
+        transparent 1%
+      )
+      center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
+}
+
+.load {
+  transform: translate(-50%, -50%);
+  /*change these sizes to fit into your project*/
+  width: 10px;
+  height: 10px;
+}
+.load hr {
+  border: 0;
+  margin: 0;
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  border-radius: 50%;
+  animation: spin 2s ease infinite;
+}
+
+.load :first-child {
+  background: #ffffff;
+  animation-delay: -1.5s;
+}
+.load :nth-child(2) {
+  background: #ec4899;
+  animation-delay: -1s;
+}
+.load :nth-child(3) {
+  background: #6366f1;
+  animation-delay: -0.5s;
+}
+.load :last-child {
+  background: #a855f7;
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(160%);
+  }
+  50% {
+    transform: translate(160%, 160%);
+  }
+  75% {
+    transform: translate(0, 160%);
+  }
+}
+
+.skills {
+  text-align: center;
+}
+
+.skills .text {
+  padding-bottom: 20px;
+}
+
+.skills h2 {
+  font-size: 35px;
+  color: var(--second-color);
+  padding-bottom: 20px;
+}
+
+.skills h2 span {
+  color: var(--main-color);
+}
+
+.skills p {
+  color: var(--second-color);
+}
+
+.skills .skill-card {
+  display: grid;
+  grid-template-columns: var(--main-grid);
+  gap: 6px;
+  margin-bottom: 70px;
+  margin-top: 60px;
+}
+.skills .skill-cardp {
+  display: grid;
+  grid-template-columns: var(--main-grid);
+
+  margin-bottom: 70px;
+  margin-top: 30px;
+}
+
+.skills .skill-cardp .cardp {
+  padding: 25px;
+  text-align: left;
+  background-color: #2f2f35;
+  border: 3px solid #000000;
+
+  color: var(--third-color);
+  transition: 1s;
+  height: 350px;
+}
+
+.skills .skill-card .card {
+  padding: 12px;
+  padding-top: 24px;
+  text-align: left;
+  height: 250px;
+  border: 2px solid;
+  border-image: linear-gradient(to right, #ec4899, #a855f7) 1;
+  color: var(--third-color);
+  transition: 1s;
+  position: relative;
+}
+
+.skills .card h4 {
+  color: rgb(255, 255, 255);
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.skills .cardp h4 {
+  color: rgb(255, 255, 255);
+  padding-top: 30px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.skills .card p {
+  font-size: 16px;
+  color: var(--third-color);
+}
+.skills .cardp p {
+  font-size: 16px;
+  color: var(--third-color);
+}
+
+.skills .card i {
+  padding: 15px;
+  width: 75px;
+
+  height: 75px;
+  color: var(--second-color);
+
+  position: absolute;
+  top: calc(-75px / 2);
+  transform: rotate(45deg);
+  left: 39%;
+  transition: 1s;
+  border: 1px solid;
+
+  border-image: linear-gradient(to right, #ec4899, #a855f7) 1;
+}
+
+.skills .card:hover {
+  background-color: #2f2f35;
+}
+
+.skills .card:hover i {
+  transform: rotate(0deg);
+  background-color: var(--bg-color);
+}
+
+.skills .card:hover h4,
+.skills .card:hover p {
+  transition: 1s;
+}
+
+.skills .cardp:hover h4,
+.skills .cardp:hover p {
+  transition: 1s;
+}
+
+.skills a {
+  border: 1px solid var(--main-color);
+  background-color: var(--main-color);
+  border-radius: 2px;
+  color: var(--second-color);
+  transition: background-color 0.8s;
+  padding: 12px 20px;
+  letter-spacing: 1.5px;
+  z-index: 50px;
+  text-decoration: none;
+}
+
+.skills a:hover {
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+
+:root {
+  --main-color: #a855f7;
+  --second-color: #1b1b1b;
+  --third-color: #d4d4d4;
+
+  --main-grid: 1fr 1fr;
+}
+
+@media (max-width: 640px) {
+  .skill-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  .skill-cardp {
+    grid-template-columns: 1fr !important;
+  }
+}
