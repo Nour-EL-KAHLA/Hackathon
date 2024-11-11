@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body {
-  --dot-bg: rgb(0, 0, 0);
-  --dot-color: rgb(143, 143, 143);
+  --dot-bg: rgb(252, 250, 250);
+  --dot-color: rgb(15, 14, 14);
   --dot-size: 1px;
   --dot-space: 22px;
   background: linear-gradient(
@@ -42,15 +42,15 @@ body {
   animation-delay: -1.5s;
 }
 .load :nth-child(2) {
-  background: #ec4899;
+  background: #078000;
   animation-delay: -1s;
 }
 .load :nth-child(3) {
-  background: #6366f1;
+  background: #0100fe;
   animation-delay: -0.5s;
 }
 .load :last-child {
-  background: #a855f7;
+  background: #000000;
 }
 
 @keyframes spin {

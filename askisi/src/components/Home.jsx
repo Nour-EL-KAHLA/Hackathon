@@ -4,6 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { TbBold } from "react-icons/tb";
+import Prompt from "./Prompt";
 
 const Home = () => {
   useEffect(() => {
@@ -18,13 +19,13 @@ const Home = () => {
           <hr />
           <hr />
         </div>
-        <div className=" text-white relative ">
+        <div className=" text-black relative ">
           Hello, welcome to
-          <span className="my-2 bg-gradient-75 rounded-md bg-gradient-to-r from-purple-500  to-pink-500 bg-bottom bg-[length:100%_30%] bg-no-repeat">
+          <span className="my-2 bg-gradient-75 rounded-md bg-gradient-to-r from-[#0100fe] to-[#078000] bg-bottom bg-[length:100%_30%] bg-no-repeat">
             ISI Info
           </span>
         </div>
-        <div className="bg-gradient-to-r py-1 from-indigo-500 via-purple-500 to-pink-500 inline-block text-transparent bg-clip-text">
+        <div className="bg-gradient-to-r py-1 from-[#0100fe] to-[#078000] inline-block text-transparent bg-clip-text">
           <TypewriterComponent
             options={{
               strings: ["Engineering", "Master's degree", "License"],
@@ -34,24 +35,13 @@ const Home = () => {
             }}
           />
         </div>
-        {/* <div>
-          <div className="flex gap-x-4 items-center mt-4 font-medium">
-            {socials.map((social) => (
-              <Contact
-                key={social.name}
-                icon={social.icon}
-                name={social.name}
-                href={social.href}
-              ></Contact>
-            ))}
-          </div>
-        </div> */}
       </div>
-      <div className="text-lg  border-b-[1px] pb-9 border-gray-700 text-gray-200 w-full md:w-[700px] ">
+      <div className="text-lg  border-b-[1px] pb-9 border-gray-700 text-gray-500 w-full md:w-[700px] ">
         Have a question? Just ask! Our app is designed to connect you with the
         information of ISI you’re looking for, helping you navigate your
         academic journey with ease.
       </div>
+      <Prompt></Prompt>
 
       {/* <Timeline></Timeline>
       <Skills></Skills>
@@ -59,13 +49,13 @@ const Home = () => {
       <Project></Project>
       <Certification></Certification> */}
 
-      <footer className=" w-full text-center text-gray-600 mb-2 bg-base-300 text-base-content">
+      {/* <footer className=" w-full text-center text-gray-600 mb-2 bg-base-300 text-base-content">
         <aside>
           <p className="pb-4">
             Copyright © 2024 - All right reserved by EASYIA
           </p>
         </aside>
-      </footer>
+      </footer> */}
     </div>
   );
 };
