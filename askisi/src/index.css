@@ -223,3 +223,17 @@ body {
     grid-template-columns: 1fr !important;
   }
 }
+audio {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.recording-text {
+  animation: blink 1s step-start infinite;
+}
